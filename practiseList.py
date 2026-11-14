@@ -99,7 +99,7 @@ for i in range(len(numbers)):
 print(f"Even:{even_list}, Odd: {odd_list}")
 
 #Check if a Number is Prime or Not:
-n = int(input())
+n = 7
 if n <= 1:
     print(n, "not a prime number")
 else:
@@ -111,3 +111,37 @@ else:
         print(n,"is Prime")
     else:
         print(n,"is Not Prime")
+
+#Find the Sum and Average 
+
+n= [1,4]
+sum = 0
+for i in n:
+    sum += i
+    average = sum/len(n) 
+
+print(f"The Sum of list {n} is {sum}")
+print(f"The avrage of list {n} is {average}")
+
+#Enumarate function 
+
+n=[4,5,6,7,9]
+
+for index, i in enumerate(n):
+    print(index, i)
+
+
+#Filter Function
+
+def is_even(x):
+    return x % 2 == 0
+
+
+n= [1,32,5,7,8,9]
+
+filtered_list = filter(is_even, n)
+print(list(filtered_list))
+
+
+l = [1,2,3,4,5,6,7]
+print(l[::-1])
