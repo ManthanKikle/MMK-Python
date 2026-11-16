@@ -63,4 +63,4 @@ def sqrt_num(n):
     return n **2
 
 result = sqrt_num(7)
-print(result) 
+print(result)
