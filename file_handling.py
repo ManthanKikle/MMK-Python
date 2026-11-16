@@ -61,3 +61,35 @@ with open('file.txt','r') as file:
     line = file.readline()
     words = line.split()
     print(words)
+    file.seek(0)
+
+
+#File Positions
+
+file_path = 'file.txt'
+
+with open(file_path, 'r') as fileobj:
+    content1 = fileobj.read(5)
+    print(content1)
+    current_pointer = fileobj.tell()
+    print(current_pointer)
+    fileobj.seek(0)
+
+with open(file_path,'rb') as fileobj:
+    fileobj.seek(2,1)
+    print(fileobj.read())
+
+
+file = open('file2.txt', 'w')
+letters = ['a', 'b', 'c', 'a', 'bb', 'ccc']
+file.writelines(letters)
+file.close
+
+with open('file2.txt', 'rb') as a:
+    with open('file3.txt', 'wb') as b:
+        content = a.read(10)
+        b.write(content)
+        print(b.read)
+
+
+    
