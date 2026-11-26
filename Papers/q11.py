@@ -10,7 +10,7 @@ B = np.array([[11],
 
 inv_A = np.linalg.inv(A)
 
-X= inv_A@B
+X= inv_A @ B
 
 print(X)
 
